@@ -16,6 +16,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.Properties;
 
 @Configuration
@@ -28,16 +30,19 @@ public class DataConfig {
 
 
     @Bean
-    public DataSource dataSource(){
-        String dbUrl = System.getenv("JDBC_DATABASE_URL");
-        String username = System.getenv("JDBC_DATABASE_USERNAME");
-        String password = System.getenv("JDBC_DATABASE_PASSWORD");
+    public DataSource dataSource() throws URISyntaxException {
+        URI jdbUri = new URI(System.getenv("JAWSDB_URL"));
+
+        String username = jdbUri.getUserInfo().split(":")[0];
+        String password = jdbUri.getUserInfo().split(":")[1];
+        String port = String.valueOf(jdbUri.getPort());
+        String jdbUrl = "jdbc:mysql://" + jdbUri.getHost() + ":" + port + jdbUri.getPath();
 
 
         HikariConfig hikariConfig = new HikariConfig();
         hikariConfig.setDriverClassName("com.mysql.jdbc.Driver");
 
-        hikariConfig.setJdbcUrl((dbUrl!=null)?dbUrl:"jdbc:mysql://localhost:3306/favoris");
+        hikariConfig.setJdbcUrl((jdbUrl!=null)?jdbUrl:"jdbc:mysql://localhost:3306/favoris");
         hikariConfig.setUsername((username!=null)?username:"root");
         hikariConfig.setPassword((password!=null)?password:"password");
 
@@ -70,7 +75,7 @@ public class DataConfig {
     }
 
     @Bean
-    public LocalContainerEntityManagerFactoryBean entityManagerFactory(){
+    public LocalContainerEntityManagerFactoryBean entityManagerFactory() throws URISyntaxException {
         LocalContainerEntityManagerFactoryBean factoryBean = new LocalContainerEntityManagerFactoryBean();
         factoryBean.setDataSource(dataSource());
         factoryBean.setJpaVendorAdapter(vendorAdapter());
