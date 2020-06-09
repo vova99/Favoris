@@ -37,13 +37,13 @@ public class DataConfig {
         HikariConfig hikariConfig = new HikariConfig();
         hikariConfig.setDriverClassName("com.mysql.jdbc.Driver");
 
-        hikariConfig.setJdbcUrl((dbUrl!=null)?dbUrl:"jdbc:mysql://localhost:3306/favoris");
-        hikariConfig.setUsername((username!=null)?username:"root");
-        hikariConfig.setPassword((password!=null)?password:"password");
+//        hikariConfig.setJdbcUrl((dbUrl!=null)?dbUrl:"jdbc:mysql://localhost:3306/favoris");
+//        hikariConfig.setUsername((username!=null)?username:"root");
+//        hikariConfig.setPassword((password!=null)?password:"password");
 
-//        hikariConfig.setJdbcUrl("mysql://z73xojno142c8aob:mqf59cacfbjn8w0s@b8rg15mwxwynuk9q.chr7pe7iynqr.eu-west-1.rds.amazonaws.com:3306/wr886dgckc9iiaiv");
-//        hikariConfig.setUsername("z73xojno142c8aob");
-//        hikariConfig.setPassword("mqf59cacfbjn8w0s ");
+        hikariConfig.setJdbcUrl("mysql://z73xojno142c8aob:mqf59cacfbjn8w0s@b8rg15mwxwynuk9q.chr7pe7iynqr.eu-west-1.rds.amazonaws.com:3306/wr886dgckc9iiaiv");
+        hikariConfig.setUsername("z73xojno142c8aob");
+        hikariConfig.setPassword("mqf59cacfbjn8w0s ");
 
         hikariConfig.setMaximumPoolSize(5);
         hikariConfig.setConnectionTestQuery("SELECT 1");
