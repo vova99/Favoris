@@ -1,1 +1,1 @@
-web: java -jar target/shop.jar
+web: java -jar target/shop.jar --port $PORT target/Shop.war
