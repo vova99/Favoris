@@ -23,19 +23,19 @@ public class MainController {
 
         return "index";
     }
-//    @GetMapping("/login")
-//    public String getLogin(){
-//        return "login";
-//    }
-//    @PostMapping("/login")
-//    public String gtLogin(){
-//        return "login";
-//    }
-
-    @RequestMapping("/login")
-    public String index() {
-        return "login";
+    @GetMapping("/login")
+    public String getLogin(){
+        return "test";
     }
+    @PostMapping("/login")
+    public String gtLogin(){
+        return "test";
+    }
+
+//    @RequestMapping("/login")
+//    public String index() {
+//        return "test";
+//    }
 
     @GetMapping("/error")
     public  String getSomeError(){
