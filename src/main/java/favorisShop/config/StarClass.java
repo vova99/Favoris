@@ -12,7 +12,7 @@ import java.util.Arrays;
 
 @SpringBootApplication
 @EnableAutoConfiguration
-@ComponentScan("favorisShop.*")
+@ComponentScan("favorisShop.controller.*")
 public class StarClass {
 
     public static void main(String[] args) {
