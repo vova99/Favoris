@@ -22,6 +22,14 @@ public class MainController {
 
         return "index";
     }
+    @GetMapping("/")
+    public String getLogin(){
+        return "login";
+    }
+    @PostMapping("/")
+    public String gtLogin(){
+        return "login";
+    }
 
     @PostMapping("/index")
     public String postIndex(Map<String,String> model){
