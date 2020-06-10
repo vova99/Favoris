@@ -7,6 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @EnableAutoConfiguration
+@ComponentScan()
 public class StarClass {
 
     public static void main(String[] args) {
