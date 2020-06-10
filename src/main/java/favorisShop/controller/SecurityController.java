@@ -24,10 +24,6 @@ public class SecurityController {
     public String getRegistry(){
         return "registration";
     }
-    @GetMapping("/")
-    public String getLogin(){
-        return "index";
-    }
 
 
     @PostMapping("/registration")

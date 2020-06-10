@@ -31,23 +31,23 @@ public class DataConfig {
 
     @Bean
     public DataSource dataSource() throws URISyntaxException {
-        URI jdbUri = new URI(System.getenv("JAWSDB_URL"));
-
-        String username = jdbUri.getUserInfo().split(":")[0];
-        String password = jdbUri.getUserInfo().split(":")[1];
-        String port = String.valueOf(jdbUri.getPort());
-        String jdbUrl = "jdbc:mysql://" + jdbUri.getHost() + ":" + port + jdbUri.getPath();
+//        URI jdbUri = new URI(System.getenv("JAWSDB_URL"));
+//
+//        String username = jdbUri.getUserInfo().split(":")[0];
+//        String password = jdbUri.getUserInfo().split(":")[1];
+//        String port = String.valueOf(jdbUri.getPort());
+//        String jdbUrl = "jdbc:mysql://" + jdbUri.getHost() + ":" + port + jdbUri.getPath();
 
 
         HikariConfig hikariConfig = new HikariConfig();
         hikariConfig.setDriverClassName("com.mysql.jdbc.Driver");
 
-//        hikariConfig.setJdbcUrl((jdbUrl!=null)?jdbUrl:"jdbc:mysql://localhost:3306/favoris");
-//        hikariConfig.setUsername((username!=null)?username:"root");
-//        hikariConfig.setPassword((password!=null)?password:"password");
-        hikariConfig.setJdbcUrl(jdbUrl);
-        hikariConfig.setUsername(username);
-        hikariConfig.setPassword(password);
+        hikariConfig.setJdbcUrl("jdbc:mysql://localhost:3306/favoris");
+        hikariConfig.setUsername("root");
+        hikariConfig.setPassword("password");
+//        hikariConfig.setJdbcUrl(jdbUrl);
+//        hikariConfig.setUsername(username);
+//        hikariConfig.setPassword(password);
 
         hikariConfig.setMaximumPoolSize(5);
         hikariConfig.setConnectionTestQuery("SELECT 1");
