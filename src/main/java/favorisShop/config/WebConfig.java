@@ -1,5 +1,7 @@
 package favorisShop.config;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.thymeleaf.ThymeleafProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -26,10 +28,12 @@ public class WebConfig extends WebMvcConfigurerAdapter {
         return new StandardServletMultipartResolver();
     }
 
+
+
     @Bean
     public InternalResourceViewResolver viewResolver(){
         InternalResourceViewResolver resolver =  new InternalResourceViewResolver();
-        resolver.setPrefix("/pages/");
+        resolver.setPrefix("/pages/"); // /pages/
         resolver.setSuffix(".jsp");
         return resolver;
     }
