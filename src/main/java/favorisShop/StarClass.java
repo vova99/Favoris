@@ -7,7 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @EnableAutoConfiguration
-@ComponentScan(basePackages = {"favorisShop.config","favorisShop.controller"})
+@ComponentScan(basePackages = {"favorisShop.config","favorisShop.controller","favorisShop.dao"})
 public class StarClass {
 
     public static void main(String[] args) {
