@@ -161,7 +161,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>favorisShop.StarClass</mainClass>
+                            <mainClass>favorisShop.controller.StarClass</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

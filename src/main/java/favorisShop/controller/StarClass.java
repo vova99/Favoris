@@ -1,4 +1,4 @@
-package favorisShop;
+package favorisShop.controller;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
