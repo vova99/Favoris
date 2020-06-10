@@ -1,1 +1,1 @@
-web: java -jar target/dependency/shop.jar
+web: java -Dserver.port=$PORT -jar target/dependency/shop.jar
