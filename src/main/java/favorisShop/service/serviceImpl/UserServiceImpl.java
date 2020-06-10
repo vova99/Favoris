@@ -17,7 +17,7 @@ public class UserServiceImpl implements UserService {
     }
 
     public User findById(int id) {
-        return userDao.findOne(id);
+        return userDao.getOne(id);
     }
 
     public List<User> findAll() {
