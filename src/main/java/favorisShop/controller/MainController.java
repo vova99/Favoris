@@ -22,11 +22,11 @@ public class MainController {
 
         return "index";
     }
-    @GetMapping("/")
+    @GetMapping("/login")
     public String getLogin(){
         return "login";
     }
-    @PostMapping("/")
+    @PostMapping("/login")
     public String gtLogin(){
         return "login";
     }
