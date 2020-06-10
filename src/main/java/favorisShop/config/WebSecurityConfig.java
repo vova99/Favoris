@@ -22,7 +22,7 @@ import javax.sql.DataSource;
 
 @Configuration
 @EnableWebSecurity
-@ComponentScan("favorisShop.controller.*")
+@ComponentScan("favorisShop.*")
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
        @Autowired
