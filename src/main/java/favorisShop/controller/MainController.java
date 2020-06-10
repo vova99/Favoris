@@ -31,6 +31,11 @@ public class MainController {
         return "login";
     }
 
+    @GetMapping("/error")
+    public  String getSomeError(){
+        return "error";
+    }
+
     @PostMapping("/index")
     public String postIndex(Map<String,String> model){
         UserDetails userDetails;
