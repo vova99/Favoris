@@ -13,17 +13,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.Arrays;
 
-@Controller
+
 @SpringBootApplication
 @EnableAutoConfiguration
 @ComponentScan(basePackages = {"favorisShop.config","favorisShop.controller","favorisShop.dao"})
 public class StarClass {
-
-    @RequestMapping("/login")
-    @ResponseBody
-    String home(){
-        return "Hello";
-    }
 
 
     public static void main(String[] args) {
