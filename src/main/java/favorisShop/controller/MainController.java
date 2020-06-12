@@ -25,9 +25,8 @@ public class MainController {
         return "index";
     }
     @GetMapping("/login")
-    @ResponseBody
     public String getLogin(){
-        return "login";
+        return "error";
     }
     @PostMapping("/login")
     public String gtLogin(){
