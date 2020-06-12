@@ -4,8 +4,7 @@
       xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
     <title>Login</title>
-    <%@ include file="../../webapp/pages/resource/bootstrapInclude.jsp"%>
-
+    <%@ include file="resource/bootstrapInclude.jsp"%>
 </head>
 <body>
     <div class="container">

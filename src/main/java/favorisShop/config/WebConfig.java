@@ -6,6 +6,10 @@ import org.springframework.boot.web.servlet.error.ErrorAttributes;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.transaction.TransactionManager;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration;
+import org.springframework.transaction.annotation.TransactionManagementConfigurer;
 import org.springframework.web.multipart.MultipartResolver;
 import org.springframework.web.multipart.support.StandardServletMultipartResolver;
 import org.springframework.web.servlet.config.annotation.*;
@@ -18,8 +22,9 @@ import java.io.File;
  */
 @Configuration
 @EnableWebMvc
+@EnableTransactionManagement
 @ComponentScan("favorisShop.*")
-public class WebConfig extends WebMvcConfigurerAdapter {
+public class WebConfig extends WebMvcConfigurerAdapter implements TransactionManagementConfigurer {
 
     @Bean
     public MultipartResolver multipartResolver(){
@@ -53,5 +58,8 @@ public class WebConfig extends WebMvcConfigurerAdapter {
     }
 
 
-
+    @Override
+    public TransactionManager annotationDrivenTransactionManager() {
+        return annotationDrivenTransactionManager();
+    }
 }
