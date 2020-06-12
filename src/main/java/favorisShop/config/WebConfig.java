@@ -29,7 +29,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
     @Bean
     public InternalResourceViewResolver viewResolver(){
         InternalResourceViewResolver resolver =  new InternalResourceViewResolver();
-        resolver.setPrefix("webapp/pages/"); // /pages/
+        resolver.setPrefix("/webapp/pages/"); // /pages/
         resolver.setSuffix(".jsp");
         return resolver;
     }
