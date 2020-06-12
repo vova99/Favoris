@@ -2,6 +2,7 @@ package favorisShop.controller;
 
 import favorisShop.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.web.servlet.error.ErrorController;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
@@ -14,7 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.Map;
 
 @Controller
-public class MainController {
+public class MainController implements ErrorController{
 
     @Autowired
     UserService userService;
@@ -49,11 +50,12 @@ public class MainController {
 //    public  String getSomeError(){
 //        return "Something bad";
 //    }
-    @RequestMapping("/error")
-    @ResponseBody
-    public  String postSomeError(){
-        return "Something bad";
-    }
+
+//    @RequestMapping("/error")
+//    @ResponseBody
+//    public  String postSomeError(){
+//        return "Something bad";
+//    }
 
     @PostMapping("/index")
     public String postIndex(Map<String,String> model){
@@ -68,4 +70,10 @@ public class MainController {
         return "index";
     }
 
+    @Override
+    @RequestMapping("/error")
+    @ResponseBody
+    public String getErrorPath() {
+        return "Something bad";
+    }
 }
