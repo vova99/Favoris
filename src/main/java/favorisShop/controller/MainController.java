@@ -44,12 +44,12 @@ public class MainController {
 //    }
 
 
-    @GetMapping("/error")
-    @ResponseBody
-    public  String getSomeError(){
-        return "Something bad";
-    }
-    @PostMapping("/error")
+//    @GetMapping("/error")
+//    @ResponseBody
+//    public  String getSomeError(){
+//        return "Something bad";
+//    }
+    @RequestMapping("/error")
     @ResponseBody
     public  String postSomeError(){
         return "Something bad";
