@@ -45,8 +45,9 @@ public class MainController {
 
 
     @GetMapping("/error")
+    @ResponseBody
     public  String getSomeError(){
-        return "error";
+        return "Something bad";
     }
 
     @PostMapping("/index")
