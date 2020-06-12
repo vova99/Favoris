@@ -15,7 +15,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.Map;
 
 @Controller
-public class MainController implements ErrorController{
+public class MainController //implements ErrorController
+{
 
     @Autowired
     UserService userService;
@@ -70,9 +71,9 @@ public class MainController implements ErrorController{
         return "index";
     }
 
-    @Override
-    @RequestMapping("/error")
-    public String getErrorPath() {
-        return "error";
-    }
+//    @Override
+//    @RequestMapping("/error")
+//    public String getErrorPath() {
+//        return "error";
+//    }
 }

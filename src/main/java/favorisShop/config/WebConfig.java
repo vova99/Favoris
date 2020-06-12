@@ -24,7 +24,7 @@ import java.io.File;
 @EnableWebMvc
 @EnableTransactionManagement
 @ComponentScan("favorisShop.*")
-public class WebConfig extends WebMvcConfigurerAdapter implements TransactionManagementConfigurer {
+public class WebConfig extends WebMvcConfigurerAdapter {
 
     @Bean
     public MultipartResolver multipartResolver(){
@@ -58,8 +58,5 @@ public class WebConfig extends WebMvcConfigurerAdapter implements TransactionMan
     }
 
 
-    @Override
-    public TransactionManager annotationDrivenTransactionManager() {
-        return annotationDrivenTransactionManager();
-    }
+
 }
