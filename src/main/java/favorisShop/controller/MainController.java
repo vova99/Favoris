@@ -49,6 +49,11 @@ public class MainController {
     public  String getSomeError(){
         return "Something bad";
     }
+    @PostMapping("/error")
+    @ResponseBody
+    public  String postSomeError(){
+        return "Something bad";
+    }
 
     @PostMapping("/index")
     public String postIndex(Map<String,String> model){
