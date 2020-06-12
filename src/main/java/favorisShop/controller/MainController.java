@@ -27,7 +27,7 @@ public class MainController implements ErrorController{
     }
     @GetMapping("/login")
     public String getLogin(){
-        return "error";
+        return "login";
     }
     @PostMapping("/login")
     public String gtLogin(){
@@ -72,8 +72,7 @@ public class MainController implements ErrorController{
 
     @Override
     @RequestMapping("/error")
-    @ResponseBody
     public String getErrorPath() {
-        return "Something bad";
+        return "error";
     }
 }
