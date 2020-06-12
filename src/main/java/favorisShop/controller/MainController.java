@@ -27,7 +27,6 @@ public class MainController //implements ErrorController
         return "index";
     }
     @GetMapping("/login")
-    @ResponseBody
     public String getLogin(){
         return "login";
     }
