@@ -25,11 +25,10 @@ public class WebConfig extends WebMvcConfigurerAdapter {
         return new StandardServletMultipartResolver();
     }
 
-
     @Bean
     public InternalResourceViewResolver viewResolver(){
         InternalResourceViewResolver resolver =  new InternalResourceViewResolver();
-        resolver.setPrefix("/webapp/pages/"); // /pages/
+        resolver.setPrefix("/pages/"); // /pages/
         resolver.setSuffix(".jsp");
         return resolver;
     }
