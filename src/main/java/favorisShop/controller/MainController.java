@@ -24,24 +24,24 @@ public class MainController {
 
         return "index";
     }
-//    @GetMapping("/login")
-//    public String getLogin(){
-//        return "test";
-//    }
-//    @PostMapping("/login")
-//    public String gtLogin(){
-//        return "test";
-//    }
+    @GetMapping("/login")
+    public String getLogin(){
+        return "login";
+    }
+    @PostMapping("/login")
+    public String gtLogin(){
+        return "login";
+    }
 
 //    @RequestMapping("/login")
 //    public String index() {
 //        return "test";
 //    }
-    @RequestMapping("/login")
-    @ResponseBody
-    String home(){
-        return "Hello";
-    }
+//    @RequestMapping("/login")
+//    @ResponseBody
+//    String home(){
+//        return "Hello";
+//    }
 
 
     @GetMapping("/error")
