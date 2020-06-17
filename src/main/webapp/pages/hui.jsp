@@ -9,7 +9,6 @@
 <html>
 <head>
     <title>hui</title>
-    <%@ include file="resource/bootstrapInclude.jsp"%>
 </head>
 <body>
 <h1>hui</h1>
