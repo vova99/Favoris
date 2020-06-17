@@ -24,7 +24,7 @@ public class MainController //implements ErrorController
     public String getRegistry(){
         return "registration";
     }
-    
+
     @GetMapping("/index")
     public String getIndex(Map<String,String> model){
 
@@ -41,17 +41,17 @@ public class MainController //implements ErrorController
 
 
 
-    @GetMapping("/error")
-    @ResponseBody
-    public  String getSomeError(){
-        return "Something bad";
-    }
-
-    @RequestMapping("/error")
-    @ResponseBody
-    public  String postSomeError(){
-        return "Something bad";
-    }
+//    @GetMapping("/error")
+//    @ResponseBody
+//    public  String getSomeError(){
+//        return "Something bad";
+//    }
+//
+//    @RequestMapping("/error")
+//    @ResponseBody
+//    public  String postSomeError(){
+//        return "Something bad";
+//    }
 
     @PostMapping("/index")
     public String postIndex(Map<String,String> model){
