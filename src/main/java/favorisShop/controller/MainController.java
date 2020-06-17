@@ -22,7 +22,7 @@ public class MainController //implements ErrorController
     UserService userService;
     @GetMapping("/registration")
     public String getRegistry(){
-        return "hui";
+        return "registration";
     }
 
     @GetMapping("/index")
