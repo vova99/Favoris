@@ -25,7 +25,7 @@ public class MainController //implements ErrorController
         return "registration";
     }
 
-    @GetMapping("/index")
+    @GetMapping("/")
     public String getIndex(Map<String,String> model){
 
         return "index";
