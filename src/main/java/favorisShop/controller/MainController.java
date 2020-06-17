@@ -20,7 +20,11 @@ public class MainController //implements ErrorController
 
     @Autowired
     UserService userService;
-
+    @GetMapping("/registration")
+    public String getRegistry(){
+        return "registration";
+    }
+    
     @GetMapping("/index")
     public String getIndex(Map<String,String> model){
 
@@ -35,28 +39,19 @@ public class MainController //implements ErrorController
         return "login";
     }
 
-//    @RequestMapping("/login")
-//    public String index() {
-//        return "test";
-//    }
-//    @RequestMapping("/login")
-//    @ResponseBody
-//    String home(){
-//        return "Hello";
-//    }
 
 
-//    @GetMapping("/error")
-//    @ResponseBody
-//    public  String getSomeError(){
-//        return "Something bad";
-//    }
+    @GetMapping("/error")
+    @ResponseBody
+    public  String getSomeError(){
+        return "Something bad";
+    }
 
-//    @RequestMapping("/error")
-//    @ResponseBody
-//    public  String postSomeError(){
-//        return "Something bad";
-//    }
+    @RequestMapping("/error")
+    @ResponseBody
+    public  String postSomeError(){
+        return "Something bad";
+    }
 
     @PostMapping("/index")
     public String postIndex(Map<String,String> model){
@@ -71,9 +66,4 @@ public class MainController //implements ErrorController
         return "index";
     }
 
-//    @Override
-//    @RequestMapping("/error")
-//    public String getErrorPath() {
-//        return "error";
-//    }
 }

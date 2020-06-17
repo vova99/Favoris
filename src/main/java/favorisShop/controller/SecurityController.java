@@ -21,11 +21,10 @@ public class SecurityController {
     @Autowired
     UserService userService;
 
-    @GetMapping("/registration")
-    @ResponseBody
-    public String getRegistry(){
-        return "registration";
-    }
+//    @GetMapping("/registration")
+//    public String getRegistry(){
+//        return "registration";
+//    }
 
 
     @PostMapping("/registration")
