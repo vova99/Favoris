@@ -10,7 +10,7 @@
 </head>
 <body>
  <h1>Hellsdvsdlkmsksklmlk</h1>
- ${abc}
+
  <sec:authorize access="hasRole('ADMIN')">
      Manage Users
  </sec:authorize>
