@@ -130,8 +130,5 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.tomcat.embed:tomcat-embed-core:9.0.35" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.glassfish:jakarta.el:3.0.3" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.tomcat.embed:tomcat-embed-websocket:9.0.35" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.tomcat.embed:tomcat-embed-jasper:9.0.35" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.tomcat.embed:tomcat-embed-el:9.0.35" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.eclipse.jdt:ecj:3.18.0" level="project" />
   </component>
 </module>
