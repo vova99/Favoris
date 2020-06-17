@@ -1,13 +1,12 @@
-
-
+<%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page isELIgnored="false"%>
 
 <html>
 <head>
     <title>Кабінет</title>
-    <%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
-    <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
-    <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-    <%@ page isELIgnored="false"%>
+
     <%@include file="resource/bootstrapInclude.jsp"%>
 </head>
 <body>
