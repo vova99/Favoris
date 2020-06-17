@@ -40,19 +40,6 @@ public class MainController //implements ErrorController
     }
 
 
-
-//    @GetMapping("/error")
-//    @ResponseBody
-//    public  String getSomeError(){
-//        return "Something bad";
-//    }
-//
-//    @RequestMapping("/error")
-//    @ResponseBody
-//    public  String postSomeError(){
-//        return "Something bad";
-//    }
-
     @PostMapping("/index")
     public String postIndex(Map<String,String> model){
         UserDetails userDetails;
