@@ -1,6 +1,8 @@
 package favorisShop.config;
 
 
+import org.hibernate.SessionFactory;
+import org.hibernate.ejb.HibernateEntityManagerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -21,6 +23,7 @@ import org.springframework.transaction.TransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.transaction.annotation.TransactionManagementConfigurer;
 
+import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 
 @Configuration
@@ -32,7 +35,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
        @Autowired
        private DataSource dataSource;
 
-
+        @Bean
+        SessionFactory sessionFactory(EntityManagerFactory emf) {
+            return ((HibernateEntityManagerFactory) emf).getSessionFactory();
+        }
        @Override
        protected void configure(HttpSecurity http) throws Exception {
            http.authorizeRequests()
