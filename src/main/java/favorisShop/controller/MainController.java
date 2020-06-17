@@ -32,7 +32,7 @@ public class MainController //implements ErrorController
     }
     @GetMapping("/login")
     public String getLogin(){
-        return "registration";
+        return "login";
     }
     @PostMapping("/login")
     public String gtLogin(){
