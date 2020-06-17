@@ -14,7 +14,7 @@
  <sec:authorize access="hasRole('ADMIN')">
      Manage Users
  </sec:authorize>
- <sec:authorize access="hasRole('USER')">
+ <sec:authorize access="hasRole('User')">
      Manage Usersdsvsdsfdsfd
  </sec:authorize>
 </body>
