@@ -1,5 +1,7 @@
 package favorisShop;
 
+import org.hibernate.SessionFactory;
+import org.hibernate.ejb.HibernateEntityManagerFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -13,6 +15,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.persistence.EntityManagerFactory;
 import java.util.Arrays;
 
 
@@ -44,6 +47,7 @@ public class StarClass extends SpringBootServletInitializer {
 
         };
     }
+
 
 
 }

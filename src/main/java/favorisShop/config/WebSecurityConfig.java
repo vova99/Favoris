@@ -35,10 +35,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
        @Autowired
        private DataSource dataSource;
 
-        @Bean
-        SessionFactory sessionFactory(EntityManagerFactory emf) {
-            return ((HibernateEntityManagerFactory) emf).getSessionFactory();
-        }
        @Override
        protected void configure(HttpSecurity http) throws Exception {
            http.authorizeRequests()
