@@ -12,7 +12,6 @@
 </head>
 <body>
 <h1>hui</h1>
-${message}
 <div class="container">
     <form action="/registration" method="post">
         <div class="form-group">
