@@ -21,7 +21,6 @@ public class MainController //implements ErrorController
     @Autowired
     UserService userService;
     @GetMapping("/registration")
-    @ResponseBody
     public String getRegistry(){
         return "registration";
     }
