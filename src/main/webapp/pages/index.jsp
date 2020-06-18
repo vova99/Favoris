@@ -16,7 +16,7 @@
 </head>
 <body>
  <h1>Hellsdvsdlkmsksklmlk</h1>
-<c:out value="${abc}"/>
+<%--<c:out value="${abc}"/>--%>
  <sec:authorize access="hasRole('ADMIN')">
      Manage Users
  </sec:authorize>
