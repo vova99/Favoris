@@ -36,9 +36,6 @@ public class SecurityController {
         }
 
         user.setActive(true);
-        List<Role> roles = new ArrayList<Role>();
-        roles.add(Role.USER);
-        user.setRoles(roles);
         userService.save(user);
 
 

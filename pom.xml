@@ -12,7 +12,7 @@
     <groupId>Favoris</groupId>
     <artifactId>Shop</artifactId>
     <version>1.0</version>
-    <packaging>jar</packaging>
+    <packaging>war</packaging>
     <properties>
         <failOnMissingWebXml>false</failOnMissingWebXml>
     </properties>

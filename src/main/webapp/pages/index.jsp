@@ -20,7 +20,7 @@
  <sec:authorize access="hasRole('ADMIN')">
      Manage Users
  </sec:authorize>
- <sec:authorize access="hasRole('User')">
+ <sec:authorize access="hasRole('USER')">
      Manage Usersdsvsdsfdsfd
  </sec:authorize>
 </body>

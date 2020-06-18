@@ -28,10 +28,10 @@ public class User implements UserDetails{
     private boolean enabled = true;
 
 
-    @ElementCollection(targetClass = Role.class, fetch = FetchType.EAGER)
-    @CollectionTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"))
+//    @ElementCollection(targetClass = Role.class, fetch = FetchType.EAGER)
+//    @CollectionTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"))
     @Enumerated(EnumType.STRING)
-    private List<Role> roles;
+    private Role roles = Role.USER;
 
     public int getId() {
         return id;
@@ -85,7 +85,7 @@ public class User implements UserDetails{
 
     public Collection<? extends GrantedAuthority> getAuthorities() {
         ArrayList<SimpleGrantedAuthority> authorities = new ArrayList<SimpleGrantedAuthority>();
-        authorities.add(new SimpleGrantedAuthority(roles.get(0).toString()));
+        authorities.add(new SimpleGrantedAuthority(roles.toString()));
         return authorities;
     }
 
@@ -105,11 +105,11 @@ public class User implements UserDetails{
         this.active = active;
     }
 
-    public List<Role> getRoles() {
+    public Role getRoles() {
         return roles;
     }
 
-    public void setRoles(List<Role> roles) {
+    public void setRoles(Role roles) {
         this.roles = roles;
     }
 }
